@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0;
+    background: rgb(52, 52, 19);
+}
+
+main {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "btnG container btnD";
+    align-items: center;
+    justify-items: center
+}
+
+#btn-gauche {
+    grid-area: btnG;
+    cursor: pointer;
+}
+
+#btn-droit {
+    grid-area: btnD;
+    cursor: pointer;
+}
+
+section {
+    grid-area: container;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+        "thumb";
+    justify-items: center;
+}
+
+.thumb {
+    box-shadow: 4px 4px 30px rgba(18, 18, 5, 0.87);
+}
+
+#thumb-1,
+#thumb-2,
+#thumb-3,
+#thumb-4 {
+    background: rgba(240, 243, 232, 0.8);
+    border: 2px solid rgb(24, 58, 11);
+    border-radius: 30px;
+    grid-area: thumb;
+    /* z-index: 4; */
+    visibility: hidden;
+}
+
+
+.btn {
+    border-radius: 300px;
+    box-shadow: 4px 4px 10px rgba(18, 18, 5, 0.87);
+}
+
+.btn:hover {
+    background: rgb(241, 238, 41);
+    border-radius: 300px;
+    transform: scale(1.2);
+    transition: all .3s ease-in-out;
+}
